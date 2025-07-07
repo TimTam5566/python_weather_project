@@ -31,6 +31,7 @@ def convert_date(iso_string):
     #strftime
     #date_object is then used to access information including year, month, day etc
     #strftime stands for string format time, (%A %d %B %Y) = Weekday, Date, Month, Year
+    
     date_object = datetime.fromisoformat(iso_string) 
     return date_object.strftime("%A %d %B %Y")
     
@@ -59,6 +60,23 @@ def calculate_mean(weather_data):
     Returns:
         A float representing the mean value.
     """
+    # weather_data - expected to be a list of numbers or strings
+    # total = 0 count = 0, are initialising variables to keep track of
+            # total - the sum of all values in the list, converted to floats
+            # count - the number of valid entries we’ve added
+    # for value in weather_data: loop that goes through each value in the waether_data list one at a time
+    # total += float(value) - converts each item to a float and adds it to a running total
+    # count += 1 - everytime a value is processed it bumps the count by one to keep track of how many values we are averaging across
+    # return total / count - calculates mean of all values added divided by count of values
+
+    total = 0
+    count = 0
+
+    for value in weather_data:
+        total += float(value)
+        count += 1
+
+    return total / count
     
 
 

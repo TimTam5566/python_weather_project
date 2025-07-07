@@ -16,6 +16,7 @@ def format_temperature(temp):
     return f"{temp}{DEGREE_SYMBOL}"
 
 
+
 def convert_date(iso_string):
     """Converts and ISO formatted date into a human-readable format.
 
@@ -24,8 +25,15 @@ def convert_date(iso_string):
     Returns:
         A date formatted like: Weekday Date Month Year e.g. Tuesday 06 July 2021
     """
-    pass
-
+    #date_object hold the data from the converted iso string
+    #datetime is a module that assists in managing date and time
+    #fromisoformat is a class that converts from iso format to a proper date time object
+    #strftime
+    #date_object is then used to access information including year, month, day etc
+    #strftime stands for string format time, (%A %d %B %Y) = Weekday, Date, Month, Year
+    date_object = datetime.fromisoformat(iso_string) 
+    return date_object.strftime("%A %d %B %Y")
+    
 
 def convert_f_to_c(temp_in_fahrenheit):
     """Converts a temperature from Fahrenheit to Celcius.
@@ -35,7 +43,12 @@ def convert_f_to_c(temp_in_fahrenheit):
     Returns:
         A float representing a temperature in degrees Celcius, rounded to 1 decimal place.
     """
-    pass
+    # round, rounds the converted temp, the 1 at the end of the equation rounds to 1 decimal place
+    # float-allows decimal places
+    # temp_in_farenheit - imports the temp in F into the equation
+    # (F-32) * 5/9 is the equation to convert F to c
+    return round((float(temp_in_fahrenheit)- 32) * 5 / 9, 1)
+
 
 
 def calculate_mean(weather_data):
@@ -46,7 +59,7 @@ def calculate_mean(weather_data):
     Returns:
         A float representing the mean value.
     """
-    pass
+    
 
 
 def load_data_from_csv(csv_file):

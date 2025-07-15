@@ -34,6 +34,7 @@ class GenerateDailySummaryTests(unittest.TestCase):
             ["2020-06-25T07:00:00+08:00", -48, 66],
             ["2020-06-26T07:00:00+08:00", 53, 66]
         ]
+        
 
     def test_generate_summary_example_one(self):
         with open("tests/expected_output/example_one_daily_summary.txt", encoding="utf8") as txt_file:
@@ -52,3 +53,4 @@ class GenerateDailySummaryTests(unittest.TestCase):
             expected_result = txt_file.read()
         result = weather.generate_daily_summary(self.example_three)
         self.assertEqual(expected_result, result)
+        

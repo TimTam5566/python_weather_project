@@ -2,14 +2,14 @@
 
 <!-- See https://stackoverflow.com/questions/60193771/a-badge-in-github-template-repository-that-will-refer-to-clones-build-status-n -->
 <!-- Use relative link so that this badge refers to the "cloned" repo and not this tempate repo -->
-![](../../workflows/Tests/badge.svg)
+![](https://github.com../../TimTam5566/python_weather_project)
 
 Starter code for the Plus Weather project.
 
 ## Checklist
 
-- [ ] Implement the methods in `weather.py`.
-- [ ] Verify that everything works as intended by running the tests from the command line with
+- [X] Implement the methods in `weather.py`.
+- [X] Verify that everything works as intended by running the tests from the command line with
 `python -m unittest tests/*.py` or by running tests directly in VS Code.
 
 ## Manually starting a guided tour of the project
